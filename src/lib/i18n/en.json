@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "courses": "Courses",
+    "blog": "Blog",
+    "login": "Log In",
+    "register": "Sign Up",
+    "dashboard": "My Dashboard"
+  },
+  "hero": {
+    "title": "The Language",
+    "subtitle": "of Football",
+    "description": "On the pitch, in the dressing room, and at press conferences. Learn Football English.",
+    "cta": "Start Learning"
+  },
+  "categories": {
+    "player": "Players",
+    "coach": "Coaches",
+    "journalist": "Commentators",
+    "fan": "Fans"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1": { "title": "Choose Your Course", "desc": "Find the right course for your level and goal" },
+    "step2": { "title": "Pay & Start", "desc": "Secure payment, instant access" },
+    "step3": { "title": "Learn & Practice", "desc": "Video lessons and live sessions" }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Log In",
+    "register": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  }
+}

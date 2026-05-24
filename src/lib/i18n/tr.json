@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "courses": "Kurslar",
+    "blog": "Blog",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "dashboard": "Panelim"
+  },
+  "hero": {
+    "title": "Futbolun Dili",
+    "subtitle": "İngilizce",
+    "description": "Sahada, soyunma odasında ve basın toplantısında. Futbol İngilizcesini öğren.",
+    "cta": "Kurslara Başla"
+  },
+  "categories": {
+    "player": "Futbolcular",
+    "coach": "Antrenörler",
+    "journalist": "Yorumcular",
+    "fan": "Taraftarlar"
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır?",
+    "step1": { "title": "Kursunu Seç", "desc": "Seviyene ve hedefine uygun kursu bul" },
+    "step2": { "title": "Öde & Başla", "desc": "Güvenli ödeme, anında erişim" },
+    "step3": { "title": "Öğren & Uygula", "desc": "Video dersler ve canlı seanslarla pratik yap" }
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  },
+  "auth": {
+    "email": "E-posta",
+    "password": "Şifre",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "noAccount": "Hesabın yok mu?",
+    "hasAccount": "Zaten hesabın var mı?"
+  }
+}
