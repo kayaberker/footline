@@ -5,13 +5,29 @@ import { i18n } from "@/lib/i18n";
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  // Admin paneli koruma — /admin/login hariç
+  if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
+    const adminAuth = request.cookies.get("admin_auth")?.value;
+    if (adminAuth !== process.env.ADMIN_PASSWORD) {
+      return NextResponse.redirect(new URL("/admin/login", request.url));
+    }
+    return NextResponse.next();
+  }
+
+  // Dil yönlendirme
   const pathnameHasLocale = i18n.locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return;
+  if (pathnameHasLocale) return NextResponse.next();
 
-  const locale = i18n.defaultLocale;
+  // Tarayıcı diline göre yönlendir
+  const acceptLanguage = request.headers.get("accept-language") ?? "";
+  const preferred = acceptLanguage.split(",")[0]?.split("-")[0]?.toLowerCase();
+  const locale = (i18n.locales as string[]).includes(preferred ?? "")
+    ? preferred!
+    : i18n.defaultLocale;
+
   return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
 }
 

@@ -5,6 +5,8 @@ import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import type { Dictionary } from "@/lib/i18n";
 
+const DEMO_USER = { email: "ogrenci@footlingo.com", password: "Futbol2024" };
+
 type Props = {
   mode: "login" | "register";
   dict: Dictionary;
@@ -22,6 +24,19 @@ export default function AuthForm({ mode, dict, lang }: Props) {
     e.preventDefault();
     setError(null);
     setLoading(true);
+
+    // Demo mod — Supabase bağlantısı olmadan test
+    if (
+      mode === "login" &&
+      email === DEMO_USER.email &&
+      password === DEMO_USER.password
+    ) {
+      localStorage.setItem("fl_demo_user", JSON.stringify({ email: DEMO_USER.email }));
+      // Demo'da 3 kursu satın alınmış göster
+      localStorage.setItem("fl_purchases", JSON.stringify(["1", "2", "3"]));
+      router.push(`/${lang}/dashboard`);
+      return;
+    }
 
     const supabase = createClient();
 

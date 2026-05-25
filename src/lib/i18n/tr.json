@@ -2,15 +2,19 @@
   "nav": {
     "courses": "Kurslar",
     "blog": "Blog",
+    "packages": "Paketler",
+    "apply": "Başvur",
     "login": "Giriş Yap",
     "register": "Kayıt Ol",
-    "dashboard": "Panelim"
+    "dashboard": "Panelim",
+    "contact": "İletişim"
   },
   "hero": {
     "title": "Futbolun Dili",
     "subtitle": "İngilizce",
     "description": "Sahada, soyunma odasında ve basın toplantısında. Futbol İngilizcesini öğren.",
-    "cta": "Kurslara Başla"
+    "cta": "Kurslara Başla",
+    "applyCta": "Hemen Başvur"
   },
   "categories": {
     "player": "Futbolcular",
@@ -20,12 +24,13 @@
   },
   "howItWorks": {
     "title": "Nasıl Çalışır?",
-    "step1": { "title": "Kursunu Seç", "desc": "Seviyene ve hedefine uygun kursu bul" },
-    "step2": { "title": "Öde & Başla", "desc": "Güvenli ödeme, anında erişim" },
+    "step1": { "title": "Başvur", "desc": "Kısa ön başvuru formunu doldur" },
+    "step2": { "title": "Kabul & Öde", "desc": "Onaylanınca ödeme bilgilerini iletiyoruz" },
     "step3": { "title": "Öğren & Uygula", "desc": "Video dersler ve canlı seanslarla pratik yap" }
   },
   "footer": {
-    "rights": "Tüm hakları saklıdır."
+    "rights": "Tüm hakları saklıdır.",
+    "contact": "İletişim"
   },
   "auth": {
     "email": "E-posta",
@@ -34,5 +39,18 @@
     "register": "Kayıt Ol",
     "noAccount": "Hesabın yok mu?",
     "hasAccount": "Zaten hesabın var mı?"
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Sorularınız için bizimle iletişime geçin.",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "send": "Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesajınız alındı, en kısa sürede dönüş yapacağız.",
+    "error": "Bir hata oluştu, lütfen tekrar deneyin.",
+    "whatsapp": "WhatsApp ile Yaz",
+    "corporate": "Kurumsal & Grup İndirimi"
   }
 }
