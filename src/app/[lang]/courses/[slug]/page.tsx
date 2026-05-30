@@ -1,6 +1,32 @@
+import type { Metadata } from "next";
 import type { Locale } from "@/lib/i18n";
 import { mockCourses, levelLabels, formatPrice } from "@/lib/mockData";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Locale; slug: string }>;
+}): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const course = mockCourses.find((c) => c.slug === slug);
+  if (!course) return {};
+  const isTr = lang === "tr";
+  const title = isTr ? course.title_tr : course.title_en;
+  const description = isTr ? course.description_tr : course.description_en;
+  return {
+    title,
+    description,
+    alternates: { canonical: `/${lang}/courses/${slug}` },
+    openGraph: {
+      title: `${title} | FootLingo`,
+      description,
+      url: `/${lang}/courses/${slug}`,
+      type: "article",
+    },
+    twitter: { title: `${title} | FootLingo`, description },
+  };
+}
 import Link from "next/link";
 import PurchaseButton from "@/components/PurchaseButton";
 

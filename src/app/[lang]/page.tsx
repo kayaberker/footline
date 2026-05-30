@@ -1,5 +1,35 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const isTr = lang === "tr";
+  return {
+    title: isTr
+      ? "FootLingo — Futbolun Dili İngilizce"
+      : "FootLingo — Learn English Through Football",
+    description: isTr
+      ? "Futbol İngilizcesini öğren. Futbolcular, antrenörler, yorumcular ve taraftarlar için profesyonel kurslar."
+      : "Learn Football English. Professional courses for footballers, coaches, commentators and fans.",
+    alternates: {
+      canonical: `/${lang}`,
+      languages: { tr: "/tr", en: "/en" },
+    },
+    openGraph: {
+      title: isTr ? "FootLingo — Futbolun Dili İngilizce" : "FootLingo — Learn English Through Football",
+      description: isTr
+        ? "Sahada, soyunma odasında ve basın toplantısında. Futbol İngilizcesini öğren."
+        : "On the pitch, in the dressing room and at the press conference. Learn Football English.",
+      url: `/${lang}`,
+      locale: isTr ? "tr_TR" : "en_US",
+    },
+  };
+}
 import HeroSection from "@/components/HeroSection";
 import CategoryCards from "@/components/CategoryCards";
 import HowItWorks from "@/components/HowItWorks";

@@ -1,5 +1,29 @@
+import type { Metadata } from "next";
 import type { Locale } from "@/lib/i18n";
 import { mockCourses, levelLabels, formatPrice } from "@/lib/mockData";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const isTr = lang === "tr";
+  return {
+    title: isTr ? "Kurslar — Futbol İngilizcesi Eğitimleri" : "Courses — Football English Training",
+    description: isTr
+      ? "Futbolcular, antrenörler, yorumcular ve taraftarlar için tasarlanmış 6 farklı Futbol İngilizcesi kursu."
+      : "6 Football English courses designed for footballers, coaches, commentators and fans.",
+    alternates: { canonical: `/${lang}/courses` },
+    openGraph: {
+      title: isTr ? "Kurslar | FootLingo" : "Courses | FootLingo",
+      description: isTr
+        ? "Futbol İngilizcesi kurslarını keşfet. Her seviye ve profil için özel içerikler."
+        : "Explore Football English courses. Tailored content for every level and profile.",
+      url: `/${lang}/courses`,
+    },
+  };
+}
 import Link from "next/link";
 
 const categoryIcons: Record<string, string> = {

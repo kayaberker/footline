@@ -79,7 +79,6 @@ export const mockCourses: Course[] = [
       "2 live group sessions",
       "Certificate",
     ],
-    youtube_id: "dQw4w9WgXcQ",
     curriculum: [
       {
         module_tr: "Modül 1: Maç Günü Dili",
@@ -211,7 +210,6 @@ export const mockCourses: Course[] = [
       "WhatsApp practice group access (3 months)",
       "Certificate",
     ],
-    youtube_id: "dQw4w9WgXcQ",
     curriculum: [
       {
         module_tr: "Modül 1: İlk Gün — Kulüpte Hayatta Kalmak",
@@ -345,7 +343,6 @@ export const mockCourses: Course[] = [
       "Priority email/message reply support (6 months)",
       "Certificate",
     ],
-    youtube_id: "dQw4w9WgXcQ",
     curriculum: [
       {
         module_tr: "Modül 1: Transfer Süreci Dili",
@@ -465,7 +462,6 @@ export const mockCourses: Course[] = [
       "Match analysis presentation video preparation guide",
       "Certificate",
     ],
-    youtube_id: "dQw4w9WgXcQ",
     curriculum: [
       {
         module_tr: "Modül 1: Taktik Dil",
@@ -605,7 +601,6 @@ export const mockCourses: Course[] = [
       "Commentary practice on real match clips",
       "Certificate",
     ],
-    youtube_id: "dQw4w9WgXcQ",
     curriculum: [
       {
         module_tr: "Modül 1: Canlı Yorum Dili",
@@ -731,7 +726,6 @@ export const mockCourses: Course[] = [
       "Lifetime access",
       "FootLingo Complete Pack Certificate",
     ],
-    youtube_id: "dQw4w9WgXcQ",
     curriculum: [],
   },
 ];
